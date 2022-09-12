@@ -1,0 +1,16 @@
+name: hyperexecute_run
+on: push
+jobs:
+  golangci:
+    name: hyperexecute grid testing
+    runs-on: ubuntu-latest
+    steps:
+      # checkout the repo
+      - name: 'Checkout GitHub Action'
+        uses: actions/checkout@main
+
+      - name: 'provide access to file'
+        uses: chmod +x ./hyperexecute
+
+      - name: run test
+        run: ./hyperexecute --user himanshur --key Z8NzB5b8eDvLWGPVwUaImrDMBH1eqazVEYvr7e8NwpAY84drYB --config yaml/linux/junit_hyperexecute_autosplit_sample.yaml
