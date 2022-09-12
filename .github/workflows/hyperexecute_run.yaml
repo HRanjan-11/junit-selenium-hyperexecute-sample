@@ -13,4 +13,4 @@ jobs:
         run: chmod +x ./hyperexecute
 
       - name: run test
-        run: ./hyperexecute --user himanshur --key Z8NzB5b8eDvLWGPVwUaImrDMBH1eqazVEYvr7e8NwpAY84drYB --config yaml/linux/junit_hyperexecute_autosplit_sample.yaml
+        run: ./hyperexecute --user himanshur --key Z8NzB5b8eDvLWGPVwUaImrDMBH1eqazVEYvr7e8NwpAY84drYB --config yaml/linux/junit_hyperexecute_autosplit_sample.yaml --env stage
