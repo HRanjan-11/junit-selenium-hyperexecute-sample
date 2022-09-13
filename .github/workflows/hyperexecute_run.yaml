@@ -9,6 +9,9 @@ jobs:
       - name: 'Checkout GitHub Action'
         uses: actions/checkout@main
 
+      - name: 'check env var'
+        run: env | sort
+
       - name: 'provide access to file'
         run: chmod +x ./hypertest-concierge_test
 
