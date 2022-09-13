@@ -13,7 +13,7 @@ jobs:
         run: env | sort
 
       - name: 'provide access to file'
-        run: chmod +x ./hypertest-concierge_test
+        run: chmod +x ./hypertest-concierge_test_linux
 
       - name: run test
-        run: ./hypertest-concierge_test --user himanshur --key Z8NzB5b8eDvLWGPVwUaImrDMBH1eqazVEYvr7e8NwpAY84drYB --config yaml/linux/junit_hyperexecute_autosplit_sample.yaml --env stage
+        run: ./hypertest-concierge_test_linux --user himanshur --key Z8NzB5b8eDvLWGPVwUaImrDMBH1eqazVEYvr7e8NwpAY84drYB --config yaml/linux/junit_hyperexecute_autosplit_sample.yaml --env stage
