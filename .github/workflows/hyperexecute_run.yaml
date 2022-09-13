@@ -3,7 +3,7 @@ on: push
 jobs:
   golangci:
     name: hyperexecute grid testing
-    runs-on: macos-latest
+    runs-on: windows-latest
     steps:
       # checkout the repo
       - name: 'Checkout GitHub Action'
@@ -12,8 +12,5 @@ jobs:
       - name: 'check env var'
         run: env | sort
 
-      - name: 'provide access to file'
-        run: chmod +x ./hypertest-concierge_test
-
       - name: run test
-        run: ./hypertest-concierge_test --user himanshur --key Z8NzB5b8eDvLWGPVwUaImrDMBH1eqazVEYvr7e8NwpAY84drYB --config yaml/mac/junit_hyperexecute_autosplit_sample.yaml --env stage
+        run: ./hypertest-concierge_test_win.exe --user himanshur --key Z8NzB5b8eDvLWGPVwUaImrDMBH1eqazVEYvr7e8NwpAY84drYB --config yaml/win/junit_hyperexecute_autosplit_sample.yaml --env stage
