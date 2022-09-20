@@ -13,4 +13,4 @@ jobs:
         run: env | sort
 
       - name: run test
-        run: ./hyperexecute.exe --user testmsftplan123 --key pZomzOu2tU6WL7oDx8xuN5X5lkoY8RpG00KaIh5aX9SgiJyBxD --config yaml/win/junit_hyperexecute_autosplit_sample.yaml --env stage
+        run: ./hyperexecute.exe --user testmsftplan123 --key pZomzOu2tU6WL7oDx8xuN5X5lkoY8RpG00KaIh5aX9SgiJyBxD --config yaml/win/junit_hyperexecute_autosplit_sample.yaml --env stage --labels "selenium"
